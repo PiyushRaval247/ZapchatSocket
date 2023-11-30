@@ -5,7 +5,7 @@ dotenv.config();
 const port = process.env.SOCKET_IO_PORT
 const io = new Server(port, {
     cors: {
-        origin: 'https://stately-muffin-ae445f.netlify.app'
+        origin: 'https://stately-cendol-059c0d.netlify.app'
     },
 });
 
