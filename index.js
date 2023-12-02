@@ -3,9 +3,10 @@ import dotenv from 'dotenv'
 
 dotenv.config();
 const port = process.env.SOCKET_IO_PORT
+const origin = process.env.SOCKET_IO_ORIGIN
 const io = new Server(port, {
     cors: {
-        origin: 'https://stately-cendol-059c0d.netlify.app'
+        origin,
     },
 });
 
@@ -55,6 +56,6 @@ io.on('connection', (socket) => {
 });
 
 // Optional: Log the server start
-io.listen(9000, () => {
+io.listen(port, () => {
     console.log('Socket.IO server is listening on port 9000');
 });
