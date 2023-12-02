@@ -56,6 +56,3 @@ io.on('connection', (socket) => {
 });
 
 // Optional: Log the server start
-io.listen(port, () => {
-    console.log('Socket.IO server is listening on port 9000');
-});
